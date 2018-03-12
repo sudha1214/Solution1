@@ -1,0 +1,35 @@
+<div class="row">
+   <div *ngFor="let status of faasStatuses | async" class="col-sm-3">
+      <div class="card">
+         <div class="card-header" [ngClass]="{
+         'amber-alert': isAmberAlert(status.memoryUsage),
+         'red-alert': isRedAlert(status.memoryUsage)
+         } ">
+                     {{status.name}}
+         </div>
+         <div class="card-block" style="height: 150px">
+                  <table class="table table-noborder" style="margin: 0px">
+                     <tbody>
+                     <tr>
+                        <td class="left">Function Id</td>
+                        <td class="left"> {{status.id}}</td>
+                     </tr>
+                     <tr>
+                        <td class="left">Memory Allocation</td>
+                        <td class="left"> {{status.memoryUsage | vmwMemoryFormat}}</td>
+                     </tr>
+                     </tbody>
+                  </table>
+
+            <div class="card-text">
+               {{status.description}}
+            </div>
+         </div>
+         <div class="card-footer">
+            <span>
+                    {{status.state}}
+            </span>
+         </div>
+      </div>
+   </div>
+</div>
