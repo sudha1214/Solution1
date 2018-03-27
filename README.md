@@ -1,7 +1,3 @@
-# VMware ng-challenge 2017
-
-Source code for the hosted ng-challenge test.
-
 ## Getting started
 
 `npm install`
@@ -30,11 +26,6 @@ use this answer, open `app.module.ts` and change the location of the import of
 `SolutionModule` from `./solution/solution.module` to `./answer/solution.module`.
 
 The `app/answer` folder is _not_ included when packaging the app using `npm run package`.
-
-## Generic User Facing Test Description
-
-Welcome to VMware ng-challenge 2017! This is one part of a three question test of your Angular
-knowledge and ability. The three questions build on each other and increase in difficulty.
 
 ### Environment
 
@@ -71,7 +62,7 @@ Make sure to have your browser's dev tools console open to watch for any runtime
 We provide all the necessary application scaffolding. Your entry point should be
 `solution.component.ts`. This component is already wired in to the app - press the _Render_
 button to see the placeholder template.
-* The app has been scaffolded to include the [Clarity 0.8.x](https://vmware.github.io/clarity/documentation) library of styles and Angular widgets.
+* The app has been scaffolded to include the [Clarity 0.8.x] library of styles and Angular widgets.
 Don't waste time writing css and components - look effortlessly professional by making
 use of what Clarity already provides and focus instead on the business logic.
 * If you wish to create new files and folders within the solution folder, you can do
